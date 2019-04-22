@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "xian's site",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "a portfolio site for xian",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "xian",
   "dependencies": {
     "gatsby": "^2.3.25",
     "gatsby-image": "^2.0.39",
@@ -35,9 +35,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "git+https://github.com/gatsbyjs/gatsby-starter-default.git"
   },
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
-  }
+  },
+  "homepage": "https://github.com/gatsbyjs/gatsby-starter-default#readme",
+  "main": "gatsby-browser.js"
 }
