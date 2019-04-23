@@ -1,6 +1,6 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
-import React, { useState, useEffect } from "react"
+import React, { useState, useEffect, useCallback } from "react"
 import { FaBars } from "react-icons/fa"
 
 import './header.css'
@@ -37,17 +37,20 @@ const LinkItem = ({ page }) => {
 }
 
 
-const Header = () => {
+const Header = (props) => {
 
-  const [isToggle, setToggle] = useState(false);
-  const tog = () => setToggle(!isToggle);
+  function toggle() {
+    const [isToggle, setBool] = useState(false);
+    const setToggle = useCallback(() => setBool(v => !v), [])
+    return {isToggle, setToggle};
+  }
 
   return (
     <header>
       <SiteLogo className='sitelogo'/>
       <div className='nav-toggle'>
-        <FaBars onClick={tog}>
-          {isToggle ? document.getElementsByClassName('nav').classList.add('show') : document.getElementsByClassName('nav').classList.remove('show')}
+        <FaBars {...toggle}>
+          {toggle()}
         </FaBars>
       </div>
       <nav className='nav'>
