@@ -6,7 +6,9 @@ import Header from "../components/header/header"
 import SEO from "../components/seo"
 
 const IndexPage = () => (
-  <Header />
+  
+  <Layout></Layout>
+
 )
 
 export default IndexPage
