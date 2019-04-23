@@ -13,6 +13,7 @@ const SiteLogo = () => {
         style={{
           color: `#313335`,
           textDecoration: `none`,
+          fontFamily: `Dokdo, cursive`,
         }}
       >
         Xian

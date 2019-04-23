@@ -29,11 +29,12 @@
   header nav ul > li {
     font-size: 3vw;
     list-style: none;
-    /* display: inline-block; */
     padding: 0 1.33em 0.3em 0;
+    font-family: 'Work Sans', sans-serif;
   }
 }
 
+/* Phone */
 @media screen and (max-width: 768px) {
   header {
     display: flex;
@@ -55,3 +56,5 @@
     margin-left: auto;
   }
 }
+
+/* Global */
