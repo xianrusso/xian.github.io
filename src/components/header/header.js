@@ -1,8 +1,7 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
-import React from "react"
-import styled from "styled-components"
-import MediaQuery from "react-responsive"
+import React, { useState, useEffect } from "react"
+import { FaBars } from "react-icons/fa"
 
 import './header.css'
 
@@ -35,18 +34,25 @@ const LinkItem = ({ page }) => {
   )
 }
 
-const Header = () => (
-  <header>
-    <SiteLogo className='sitelogo'/>
-    <nav>
-      <ul role='navigation'>
-        <LinkItem page='About' />
-        <LinkItem page='Work' />
-        <LinkItem page='Contact' />
-      </ul> 
-    </nav>
-  </header>
-)
+
+const Header = () => {
+
+  return (
+    <header>
+      <SiteLogo className='sitelogo'/>
+      <div className='nav-toggle'>
+        <FaBars></FaBars>
+      </div>
+      <nav>
+        <ul role='navigation'>
+          <LinkItem page='About' />
+          <LinkItem page='Work' />
+          <LinkItem page='Contact' />
+        </ul> 
+      </nav>
+    </header>
+  )
+}
 
 Header.propTypes = {
   siteTitle: PropTypes.string,
