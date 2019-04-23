@@ -4,6 +4,7 @@ import { StaticQuery, graphql } from "gatsby"
 
 import Header from "./header/header"
 import Content from "./content/content"
+import Image from "./image"
 // import "./layout.css"
 
 const Layout = ({ children }) => (
@@ -21,7 +22,8 @@ const Layout = ({ children }) => (
       <>
         <div class='container'>
           <Header />
-          <Content></Content>
+          <Content />
+          <Image />
         </div>
       </>
     )}
