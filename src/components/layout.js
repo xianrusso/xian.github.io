@@ -2,8 +2,8 @@ import React from "react"
 import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
 
-import StyledHeader from "./header"
-import "./layout.css"
+import Header from "./header/header"
+// import "./layout.css"
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -18,7 +18,7 @@ const Layout = ({ children }) => (
     `}
     render={data => (
       <>
-        <StyledHeader />
+        <Header />
       </>
     )}
   />
