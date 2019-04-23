@@ -58,3 +58,6 @@
 }
 
 /* Global */
+.show {
+  display: block;
+}

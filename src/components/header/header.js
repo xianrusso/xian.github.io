@@ -13,7 +13,7 @@ const SiteLogo = () => {
         style={{
           color: `#313335`,
           textDecoration: `none`,
-          fontFamily: `Dokdo, cursive`,
+          fontFamily: `East Sea Dokdo, cursive`,
           fontSize: `6vw`,
         }}
       >
@@ -39,13 +39,18 @@ const LinkItem = ({ page }) => {
 
 const Header = () => {
 
+  const [isToggle, setToggle] = useState(false);
+  const tog = () => setToggle(!isToggle);
+
   return (
     <header>
       <SiteLogo className='sitelogo'/>
       <div className='nav-toggle'>
-        <FaBars></FaBars>
+        <FaBars onClick={tog}>
+          {isToggle ? document.getElementsByClassName('nav').classList.add('show') : document.getElementsByClassName('nav').classList.remove('show')}
+        </FaBars>
       </div>
-      <nav>
+      <nav className='nav'>
         <ul role='navigation'>
           <LinkItem page='About' />
           <LinkItem page='Work' />
