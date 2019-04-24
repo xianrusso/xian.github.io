@@ -1,0 +1,24 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+header {
+  grid-area: header;
+}
+
+.container {
+  grid-area: content;
+}
+
+
+@media (min-width: 768px) {
+  .container {
+    display: grid;
+    grid-template-areas: 
+      'header header header'
+      'image content content'
+      'footer footer footer'
+  }
+}
