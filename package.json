@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "gatsby": "^2.3.27",
+    "react-icons": "^3.6.1",
+    "sharp": "^0.22.0",
+    "styled-components": "^4.2.0"
+  }
+}
